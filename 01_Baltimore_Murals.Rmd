@@ -1,13 +1,12 @@
 ---
 title: "Baltimore Murals"
 author: "Leanne Fortney"
-date: "March 29, 2017"
+date: "April 10, 2017"
 output: html_document
 ---
 
 
 ```{r}
-
 library(sf)                  
 library(leaflet)            
 library(scales)             
@@ -16,31 +15,66 @@ library(cleanNLP)
 library(ggmap)
 ```
 ```{r}
-murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimore_Murals/Baltimore_City_Murals.csv",
-    col_types =  cols(
+Baltimore_City_Murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimore_Murals/Baltimore_Murals/Baltimore_City_Murals.csv",
+     col_types =  cols( 
     location = col_character(),
+    city = col_character(),
+    state = col_character(),
     artistFirstName = col_character(),
     artistLastName = col_character(),
-    YEAR = col_integer()
-  ))
+    YEAR = col_integer(),
+    address = col_character()
+))
 ```
-testing
 
 ```{r}
+artists <- Baltimore_City_Murals %>% 
+    select(-address) %>% 
+    mutate(artist_name = paste(artistFirstName, artistLastName, sep = " ")) %>%
+    mutate(site = paste(location, city, state, sep = ", "))
+select(artists, artist_name, location)
 
-artist <- murals %>% 
-select(artistFirstName, artistLastName, location) %>% 
-mutate(artist = paste(artistFirstName, artistLastName, sep = " ")) %>% 
-  distinct()
-to_geocode <- artist
-  
-coords <- geocode(to_geocode$location, output = "latlona")
+coords <- geocode(artists$location, output = "latlona") 
+address_coords <- bind_cols(artists, coords) 
+
+address_coords %>% 
+select(address_coords, artist_name, YEAR, lon, lat) %>% 
+
+leaflet() %>% 
+  addTiles() %>% 
+  addCircleMarkers(data = address_coords,
+                   lng = ~lon, lat = ~lat,
+                   color = "purple", weight = 1,
+                   popup = ~paste(artist_name, '<br>', location))
+```
+```
+In 1975, Baltimore City initiated a record of 
+
+```{r Baltimore, echo=FALSE}
+
+artists <- Baltimore_City_Murals %>% 
+    select(-address) %>% 
+    mutate(artist_name = paste(artistFirstName, artistLastName, sep = " ")) %>%
+    mutate(site = paste(location, city, state, sep = ", "))
+
+coords <- geocode(Baltimore_City_Murals$site, output = "latlona")
 address_coords <- bind_cols(to_geocode, coords)
 
 address_coords %>% 
   select(artist, location, lon, lat)
 
 
+select(Baltimore_City_Murals, address, lon, lat) 
+
+
+leaflet() %>% 
+  addTiles() %>% 
+  addCircleMarkers(data = address_coords,
+                   lng = ~lon, lat = ~lat,
+                   label = ~paste(artist),
+                   radius = 10,
+                   color = "purple", weight = 1,
+                   popup = ~paste(artist, '<br>', address))
 
 ```
 
