@@ -1,0 +1,48 @@
+---
+title: "Baltimore Murals"
+author: "Leanne Fortney"
+date: "March 29, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(sf)                  
+library(leaflet)            
+library(scales)             
+library(tidyverse)
+library(cleanNLP)
+library(ggmap)
+```
+```{r}
+murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimore_Murals/Baltimore_City_Murals.csv",
+    col_types =  cols(
+    location = col_character(),
+    artistFirstName = col_character(),
+    artistLastName = col_character(),
+    YEAR = col_integer()
+  ))
+```
+
+```{r}
+
+artist <- murals %>% 
+select(artistFirstName, artistLastName, location) %>% 
+mutate(artist = paste(artistFirstName, artistLastName, sep = " ")) %>% 
+  distinct()
+to_geocode <- artist
+  
+coords <- geocode(to_geocode$location, output = "latlona")
+address_coords <- bind_cols(to_geocode, coords)
+
+address_coords %>% 
+  select(artist, location, lon, lat)
+
+
+
+```
+
