@@ -5,8 +5,11 @@ date: "April 10, 2017"
 output:
   pdf_document: default
   html_document: default
+  GET /rate_limit
 ---
-
+```{r}
+get/rate_limit
+```
 
 ```{r Libraries, include=FALSE}
 library(sf)                  
@@ -29,7 +32,7 @@ Baltimore_City_Murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimo
 ))
 ```
 ```
-In 1975, Baltimore City initiated a record of murals with the Baltimore City limits. During this time, Baltimore created the Baltimore Mural Program in hopes to take back the community. This visualization notes the locations of each mural that has been produced and recorded. The visualization indicates the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
+In 1975, Baltimore City, Maryland, created the Baltimore Mural Program in hope to take back the community through city beautification program. During this time, Baltimore City also initiated a record keeping of murals with the city limits. This visualization, below, notes the locations of each mural that has been produced and recorded since the start of the program. The visualization includes the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
 
 ```
 
@@ -54,14 +57,31 @@ leaflet() %>%
   addTiles() %>% 
   addCircleMarkers(data = Baltimore_City_Murals,
                    lng = ~lon, lat = ~lat, 
-                   color = "purple", weight = 1,
+                   color = "#0004fc", weight = 1,
                    radius = 5,
-                   popup = ~paste(artist_name, ", ", YEAR, '<br>', location))
+                   popup = ~paste(artist_name, ", ", YEAR, '<br>', location, 
+                  zoomAnimation = TRUE))
 ```
 ```
-
+It is amazing to see where the city first choose to have the murals. With the first mural completed in 1987 until 1990, you can see the tarrgeted areas that the city choose in order to fight gangs, girfitti, and to bring a sense of ownership to the community. These are, as seen below, were the areas that Baltimore felt would improve a greater sense of identity and pride of their community.  
 
 ```
+```{r}
+Early <- Baltimore_City_Murals %>% 
+  group_by(YEAR) 
+arrange(Early, YEAR)
+filter(Early, YEAR <= 1990) %>% View
 
+leaflet() %>% 
+  addTiles() %>% 
+  addCircleMarkers(data = Early,
+                   lng = ~lon, lat = ~lat, 
+                   color = "#f90031", weight = 1,
+                   radius = 5,
+                   popup = ~paste(artist_name,",",YEAR, '<br>', location))
+
+
+?leaflet
+```
 
 
