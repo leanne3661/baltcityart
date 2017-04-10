@@ -3,8 +3,8 @@ title: "Baltimore Murals"
 author: "Leanne Fortney"
 date: "April 10, 2017"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r Libraries, include=FALSE}

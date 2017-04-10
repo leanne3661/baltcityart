@@ -133,7 +133,7 @@ $(document).ready(function () {
 </div>
 
 
-<pre><code>In 1975, Baltimore City initiated a record of murals with the Baltimore City limits. During this time, Baltimore created the Baltimore Mural Program in hopes to take back the community. This visualization notes the locations of each mural that has been produced and recorded. The visualization indicates the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
+<pre><code>In 1975, Baltimore City, Maryland, created the Baltimore Mural Program in hope to take back the community through city beautification program. During this time, Baltimore City also initiated a record keeping of murals with the city limits. This visualization, below, notes the locations of each mural that has been produced and recorded since the start of the program. The visualization includes the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
 </code></pre>
 <pre><code>## # A tibble: 171 × 2
 ##          artist_name                              location
@@ -149,6 +149,7 @@ $(document).ready(function () {
 ## 9       Archie Veale                    400 N. Pulaski St.
 ## 10  Patrick Jacobson                    2324 McElderry St.
 ## # ... with 161 more rows</code></pre>
+<pre><code>## Joining, by = c(&quot;location&quot;, &quot;city&quot;, &quot;state&quot;, &quot;artistFirstName&quot;, &quot;artistLastName&quot;, &quot;YEAR&quot;)</code></pre>
 <pre><code>## # A tibble: 171 × 9
 ##                                 location      city    state
 ##                                    &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;
@@ -165,54 +166,388 @@ $(document).ready(function () {
 ## # ... with 161 more rows, and 6 more variables: artistFirstName &lt;chr&gt;,
 ## #   artistLastName &lt;chr&gt;, YEAR &lt;int&gt;, address &lt;chr&gt;, site &lt;chr&gt;,
 ## #   artist_name &lt;chr&gt;</code></pre>
-<pre><code>## # A tibble: 171 × 10
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1731%20E.%20Chase%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=N.%20Patterson%20Park%20Ave.%20and%20N.%20Gay%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1103%20Brentwood%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=N.%20Patterson%20Park%20Ave.%20and%20N.%20Gay%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=711%20N.%20Carey%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=141%20S.%20Central%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1611%20Carey%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2229%201/2%20W.%20Pratt%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=400%20N.%20Pulaski%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2324%20McElderry%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=401E.%20Lorraine%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=900%20N.%20Bond%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=343%20Scott%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2124%20Mura%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1115%20Hollins%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2424%20McElderry%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=519%20S.%20Highland%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2439%20Charles%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1620%20Bush%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2009%20Annapolis%20Road,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Key%20Highway%20under%20I95,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Warning: geocode failed with status ZERO_RESULTS, location = &quot;Key Highway
+## under I95, Baltimore, Maryland&quot;</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1200%20Hollins%20Street,%20Hollins%20Market%20Parking%20Lot,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1339%20E.%20North%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=5801%20Reisterstown%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1339%20E.%20North%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Russell%20and%20Hamburg%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=905%20Lemmon%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1000%20N.%20Patterson%20Park%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1756%20E.%20Preston%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=James%20St.%20near%20Ramsey%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Warning: geocode failed with status ZERO_RESULTS, location = &quot;James St.
+## near Ramsey St., Baltimore, Maryland&quot;</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=27th%20and%20Greenmount,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3801%20Eastern%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=601%20E.%2033rd%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=436%20W.%20Lafayette%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=592%20Presstman%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=5700%20York%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2000%20E.%20Pratt%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2009%20Annapolis%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=886%20Washington%20Blvd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2117%20%20E.%20North%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1219%20Bayard%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=600%20Cherry%20Hill%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=4004%20Frederick%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1601%20N.%20Calhoun%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1398%20Mt%20Royal%20Avenue,%20Midtown%20Academy%20(interior),%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3030%20Jefferson%20Street,%20Elwood%20Park,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=401%20Whitridge%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=700%20N.%20Calhoun%20Street,%20Harlem%20Park%20Recreation%20Center,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1940%20Druid%20Hill%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1137%20Harford%20Road,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=450%20E.%2022nd%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Wicomico%20and%20Bayard%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=903%20N.%20Stricker%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Ramsay%20and%20Cross%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=801%20McCulloh%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=North%20Ave%20and%20Harford%20Road,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1928%20Pennsylvania%20Avenue%20(mosaic),%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Herring%20Run%20Park,%20off%20Harford%20Road%20at%20Argonne,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Warning: geocode failed with status ZERO_RESULTS, location = &quot;Herring Run
+## Park, off Harford Road at Argonne, Baltimore, Maryland&quot;</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2710%20E.%20Hoffman%20Street,%20Fort%20Worthington%20Rec%20Center,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=221%20Pulaski%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=601%20E.%2033rd%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3424%20Elm%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=4501%20Curtis%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Greenmount%20Ave.%20and%20Venerable%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=W.%20Ostend%20and%20James%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2300%20Washington%20Boulevard,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Ramsey%20and%20Monroe%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=765%20W.%20Cross%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=N.%20Stricker%20and%20W.%20Franklin%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1800%20block%20Hanover%20St,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=601%20E.%2033rd%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=529%20E.%2021st%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=330%20W.%20Lafayette%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1818%20W.%20Fayette%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3313%20Greenmount%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3120%20Erdman%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=33rd%20and%20Greenmount%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=210%20Guilford%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1327%20Washington%20Boulevard,%20Barrister%20School%20(interior),%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Warning: geocode failed with status ZERO_RESULTS, location = &quot;1327
+## Washington Boulevard, Barrister School (interior), Baltimore, Maryland&quot;</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=711%20Poplar%20Grove,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1740%20Druid%20Hill%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=503%20Oldham%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=323%20E.%2020th%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=North%20and%20Harford%20Rds.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1170%20Carroll%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2174%20Hollins%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=837%20Washington%20Blvd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=610%20S.%20Broadway,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=114%20Hamburg%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1400%20North%20Avenue%20(Court%20Building%20parking%20lot),%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=759%20Washington%20Boulevard,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=210%20E.%2022nd%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=600%20Cherry%20Hill%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2222%20Druid%20Park%20Dr.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=106%20S.%20Calverton%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1207%20E.%20North%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Ashton%20and%20Smallwood%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=N.%20Duncan%20and%20McElderry%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=900%20Ostend%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=600%20W.%2028th%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Ashland%20Ave.%20and%20N.%20Washington%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2310%20Harford%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=4000%20Reistertown%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=North%20and%20Park%20Aves.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=500%20N.%20Howard%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=115%20S.%20Carey%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1425%20Mulberry%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3301%20Belair%20Road,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3900%20Bel%20Air%20Road,%20Movie%20Shed,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## Warning: geocode failed with status ZERO_RESULTS, location = &quot;3900 Bel Air
+## Road, Movie Shed, Baltimore, Maryland&quot;</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=540%20Lakewood%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=529%20S.%20Broadway,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1400%20Greenmount%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=4337%20Park%20Heights,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=528%20Benninghaus%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2798%20The%20Alemeda,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=416%20Monroe%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=601%20E.%2033rd%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=3500%20Hillen%20Rd.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=38%20E.%20Cross%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1224%20W.%20Lombard%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=910%20W.%20Pratt%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1644%20E.%20Pratt%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1617%20N.%20Calvert%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=4000%20Park%20Heights%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Cathedral%20and%20Centre%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1301%20Woodbourne%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=801%20McCulloh%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=412%20S.%20Broadway,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1904%20McCulloh%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=325%20N.%20Fulton%20Ave.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=200%20N.%20Bentalou%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=929%20W.%2036th%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2043%20Pennsylvania%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1530%20N.%20Bentalou%20Street,%20Easterwood%20Recreation%20Center,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=4100%20Eastern%20Avenue,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2410%20Tolley%20Street,%20Morrell%20Park,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1503%20Durham%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Baltimore%20Farmer's%20Market%20-%20Holliday%20and%20Saratoga%20Streets,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=2900%20Barclay%20Street%20(Mosaic),%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Howard%20and%20Franklin%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1139%20N.%20Gilmore%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=W.%20Hamburg%20and%20Bayard%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Liberty%20and%20Clay%20Sts.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=1317%20W.%20Baltimore%20St.,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## .</code></pre>
+<pre><code>## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=115%20W.%20Mulberry%20Street,%20Baltimore,%20Maryland&amp;sensor=false</code></pre>
+<pre><code>## # A tibble: 888 × 14
 ##                                 location      city    state
 ##                                    &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;
 ## 1                      1731 E. Chase St. Baltimore Maryland
 ## 2  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
-## 3                    1103 Brentwood Ave. Baltimore Maryland
-## 4  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
-## 5                       711 N. Carey St. Baltimore Maryland
-## 6                    141 S. Central Ave. Baltimore Maryland
-## 7                         1611 Carey St. Baltimore Maryland
-## 8                  2229 1/2 W. Pratt St. Baltimore Maryland
-## 9                     400 N. Pulaski St. Baltimore Maryland
-## 10                    2324 McElderry St. Baltimore Maryland
-## # ... with 161 more rows, and 7 more variables: artistFirstName &lt;chr&gt;,
-## #   artistLastName &lt;chr&gt;, YEAR &lt;int&gt;, artist_name &lt;chr&gt;, lon &lt;dbl&gt;,
-## #   lat &lt;dbl&gt;, address &lt;chr&gt;</code></pre>
-<pre><code>## # A tibble: 171 × 4
-##     YEAR       artist_name       lon      lat
-##    &lt;int&gt;             &lt;chr&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1   2004 Jennifer Rattigan -76.59295 39.30310
-## 2   2004      Lyle Kissack -76.58588 39.31098
-## 3   2000       Gary Mullen -76.60932 39.30295
-## 4   2004 Alexander Martray -76.58588 39.31098
-## 5   1989   Deborah English -76.63831 39.29704
-## 6   1989  Donna McCullough -76.59917 39.28934
-## 7   1990    Pontella Mason -76.64142 39.30774
-## 8   1990     James Voshell -76.61707 39.28519
-## 9   1994      Archie Veale -76.65008 39.29506
-## 10  1995  Patrick Jacobson -76.58426 39.29791
-## # ... with 161 more rows</code></pre>
-<pre><code>## # A tibble: 166 × 10
-##                                 location      city    state
-##                                    &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;
-## 1                      1731 E. Chase St. Baltimore Maryland
-## 2  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
-## 3                    1103 Brentwood Ave. Baltimore Maryland
-## 4  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
-## 5                       711 N. Carey St. Baltimore Maryland
-## 6                    141 S. Central Ave. Baltimore Maryland
-## 7                         1611 Carey St. Baltimore Maryland
-## 8                  2229 1/2 W. Pratt St. Baltimore Maryland
-## 9                     400 N. Pulaski St. Baltimore Maryland
-## 10                    2324 McElderry St. Baltimore Maryland
-## # ... with 156 more rows, and 7 more variables: artistFirstName &lt;chr&gt;,
-## #   artistLastName &lt;chr&gt;, YEAR &lt;int&gt;, artist_name &lt;chr&gt;, lon &lt;dbl&gt;,
-## #   lat &lt;dbl&gt;, address &lt;chr&gt;</code></pre>
-<div id="htmlwidget-2972e22e3366701809ab" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2972e22e3366701809ab">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[39.3031003,39.3109761,39.302946,39.3109761,39.297045,39.289335,39.3077396,39.285186,39.295057,39.2979098,39.3199352,39.3004681,39.2838909,39.3052492,39.2872453,39.293078,39.2979257,39.293078,39.2858747,39.317473,39.273966,39.2667052,null,39.285417,39.3117006,39.3509573,39.3117006,39.2797736,39.2861963,39.302475,39.3056177,null,39.293078,39.3209125,39.2859998,39.293078,39.3278143,39.3035695,39.3061202,39.3594491,39.289654,39.2667052,39.2829983,39.312175,39.279197,39.250427,39.2817615,39.3063709,39.293078,39.293078,39.3084347,39.2970553,39.3214392,39.288901,39.307208,39.303848,39.293078,39.3147123,39.2766086,39.299112,39.2836139,39.2987856,39.3119258,39.2897149,39.293078,39.293078,39.293078,39.293078,null,39.307697,39.2842879,39.3278143,39.329362,39.2247792,39.3292198,39.2824846,39.2696391,39.2831505,39.279544,39.2940726,39.269005,39.293078,39.293078,39.3278143,39.3135567,39.3050422,39.289741,39.3289315,39.3211909,39.3284973,39.2918436,null,39.2960359,39.305689,39.2865228,39.312194,39.3119258,39.2811343,39.287095,39.2828111,39.293078,39.2841296,39.293078,39.293078,39.293078,39.293078,39.2778695,39.3120804,39.2828883,39.3145669,39.250427,39.331008,39.2877232,39.311526,39.281912,39.2975474,39.2787609,39.3194381,39.3006826,39.316151,39.3338136,39.3107424,39.2950008,39.286059,39.292915,39.293078,39.3215886,null,39.2976988,39.2848418,39.3061015,39.339368,39.3590084,39.322992,39.282524,39.3278143,39.3325566,39.2771115,39.286767,39.2860281,39.2893717,39.293078,39.293078,39.308186,39.3344744,39.2962935,39.3535614,39.2987856,39.2861495,39.3072454,39.292694,39.2909453,39.293078,39.293078,39.3308982,39.293078,39.293078,39.293078,39.3065511,39.3054496,39.2869024,39.2661039,39.3079463,39.293078,39.2897149,39.29494,39.302162,39.2772694,39.2923466,39.288278,39.2939665],[-76.5929533,-76.5858767,-76.609316,-76.5858767,-76.638309,-76.5991729,-76.6414165,-76.6170697,-76.650078,-76.5842579,-76.6109809,-76.5963439,-76.628641,-76.5873391,-76.6357631,-76.6108229,-76.5828445,-76.6108229,-76.5689758,-76.616725,-76.633554,-76.6314402,null,-76.6213401,-76.5996465,-76.6941267,-76.5996465,-76.623774,-76.6324665,-76.5855604,-76.592743,null,-76.6108229,-76.6094637,-76.5646963,-76.6108229,-76.6079985,-76.6284875,-76.6375274,-76.6103228,-76.588836,-76.6314402,-76.6309571,-76.588144,-76.635882,-76.6222864,-76.682277,-76.6411675,-76.6108229,-76.6108229,-76.6219272,-76.5741846,-76.6109848,-76.6391809,-76.635377,-76.6018845,-76.6108229,-76.6096862,-76.6328351,-76.641247,-76.6334947,-76.6226857,-76.5993775,-76.6072779,-76.6108229,-76.6108229,-76.6108229,-76.6108229,null,-76.5783686,-76.649615,-76.6079985,-76.631377,-76.5865979,-76.6094263,-76.6349585,-76.6495854,-76.6466378,-76.627928,-76.6412845,-76.615478,-76.6108229,-76.6108229,-76.6079985,-76.6087327,-76.6265243,-76.646022,-76.6091475,-76.5725204,-76.6094311,-76.6115566,null,-76.6646386,-76.633448,-76.5557734,-76.611645,-76.5993775,-76.6329404,-76.652203,-76.6299937,-76.6108229,-76.5936199,-76.6108229,-76.6108229,-76.6108229,-76.6108229,-76.6161755,-76.5989742,-76.6276968,-76.61315,-76.6222864,-76.6519165,-76.6121493,-76.60231,-76.6511231,-76.5872084,-76.6301065,-76.6252679,-76.5897136,-76.5962491,-76.664449,-76.6279728,-76.6197755,-76.637732,-76.64068,-76.6108229,-76.5732533,null,-76.5796004,-76.5930289,-76.6089164,-76.665756,-76.6090847,-76.59322,-76.646848,-76.6079985,-76.5910362,-76.6130808,-76.637447,-76.6326869,-76.5941845,-76.6108229,-76.6108229,-76.613336,-76.6632311,-76.6169577,-76.5925765,-76.6226857,-76.5939648,-76.6339521,-76.645172,-76.6534744,-76.6108229,-76.6108229,-76.6324382,-76.6108229,-76.6108229,-76.6108229,-76.6381413,-76.653866,-76.5621213,-76.648539,-76.5919793,-76.6108229,-76.6072779,-76.6197729,-76.64286,-76.6336963,-76.616804,-76.6387366,-76.6176386],5,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"purple","weight":1,"opacity":0.5,"fill":true,"fillColor":"purple","fillOpacity":0.2,"dashArray":null},null,null,["Jennifer Rattigan ,  2004 <br> 1731 E. Chase St.","Lyle Kissack ,  2004 <br> N. Patterson Park Ave. and N. Gay St.","Gary Mullen ,  2000 <br> 1103 Brentwood Ave.","Alexander Martray ,  2004 <br> N. Patterson Park Ave. and N. Gay St.","Deborah English ,  1989 <br> 711 N. Carey St.","Donna McCullough ,  1989 <br> 141 S. Central Ave.","Pontella Mason ,  1990 <br> 1611 Carey St.","James Voshell ,  1990 <br> 2229 1/2 W. Pratt St.","Archie Veale ,  1994 <br> 400 N. Pulaski St.","Patrick Jacobson ,  1995 <br> 2324 McElderry St.","Erik Warren ,  1996 <br> 401E. Lorraine St.","Archie Veale ,  1998 <br> 900 N. Bond St.","Mary Carfagno Ferguson ,  1999 <br> 343 Scott St.","Charles Lawrence ,  2000 <br> 2124 Mura St.","Espi and Jennifer Frazier and Rattigan ,  2003 <br> 1115 Hollins St.","Bill Remington ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Pontella Mason ,  2007 <br> 2424 McElderry Street","Donald Tyson ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Joel Bergner ,  2008 <br> 519 S. Highland Street","Greg Gannon ,  2011 <br> 2439 Charles Street","Shawn James and Mural Masters ,  2004 <br> 1620 Bush St.","Lyle Kissack ,  2011 <br> 2009 Annapolis Road","Michael Kirby ,  2005 <br> Key Highway under I95","Chevelle M. Moore Jones ,  1988 <br> 1200 Hollins Street, Hollins Market Parking Lot","Tom Miller ,  1991 <br> 1339 E. North Ave.","James Voshell ,  1991 <br> 5801 Reisterstown Rd.","Tom Miller ,  1992 <br> 1339 E. North Ave.","Unknown Wyland ,  1993 <br> Russell and Hamburg Sts.","John Ellsberry ,  1994 <br> 905 Lemmon Street","Lyle and Gerald Kissack and Ross ,  1997 <br> 1000 N. Patterson Park Ave.","Mary Carfagno Ferguson ,  1998 <br> 1756 E. Preston St.","Tony Shore and Area skateboarders ,  2000 <br> James St. near Ramsey St.","Laura Lynn Emberson ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Cindy and Lyle Garcia and Kissack ,  2006 <br> 27th and Greenmount","Michael Kirby ,  2006 <br> 3801 Eastern Avenue","Michelle Santos ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Michael Owens ,  2008 <br> 601 E. 33rd Street","Joel Bergner ,  2011 <br> 436 W. Lafayette Street","Lyle Kissack ,  2007 <br> 592 Presstman Street","Antonio Rodriquez ,  1991 <br> 5700 York Rd.","Mary Carfagno Ferguson ,  1994 <br> 2000 E. Pratt St.","Patricia Stoakley ,  1995 <br> 2009 Annapolis Rd.","Mary Carfagno Ferguson ,  1996 <br> 886 Washington Blvd.","Pontella Mason ,  1997 <br> 2117  E. North Ave.","Mary Carfagno Ferguson ,  1998 <br> 1219 Bayard St.","Tom Miller ,  1998 <br> 600 Cherry Hill Rd.","Lyle Kissack ,  2000 <br> 4004 Frederick Ave.","Benari Stewart and Urban Xperience ,  2005 <br> 1601 N. Calhoun St.","Guy Jones ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Shawn James ,  2007 <br> 1398 Mt Royal Avenue, Midtown Academy (interior)","Mark Selby ,  2009 <br> 3030 Jefferson Street, Elwood Park","Lyle Kissack ,  2010 <br> 401 Whitridge Street","John Marra ,  2010 <br> 700 N. Calhoun Street, Harlem Park Recreation Center","Michelle Santos ,  2011 <br> 1940 Druid Hill Avenue","Jessie Unterhalter ,  2011 <br> 1137 Harford Road","Brooks Todd ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Lyle Kissack ,  1999 <br> 450 E. 22nd St.","Shawn James and Mural Masters ,  2004 <br> Wicomico and Bayard Sts.","Pontella Mason ,  1994 <br> 903 N. Stricker St.","John Ellsberry ,  1998 <br> Ramsay and Cross Sts.","Gary Mullen ,  1999 <br> 801 McCulloh St.","Spoon and Dan Popkin and Van Allen ,  2003 <br> North Ave and Harford Road","Julie and Leslie Stovall and Furlong ,  2003 <br> 1928 Pennsylvania Avenue (mosaic)","Gary Mullen ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Nicolas Tolls ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Ernie Shaw ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Joel Bergner ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2008 <br> Herring Run Park, off Harford Road at Argonne","Tom Clayton ,  2009 <br> 2710 E. Hoffman Street, Fort Worthington Rec Center","Michelle Santos ,  2010 <br> 221 Pulaski Street","Danamarie Hosler ,  2008 <br> 601 E. 33rd Street","Charles Lawrence ,  2011 <br> 3424 Elm Avenue","Peggy Ward ,  2005 <br> 4501 Curtis Avenue","Robert Heironimus ,  1996 <br> Greenmount Ave. and Venerable Ave.","Mary and Terry Carfagno Ferguson and Van Tassell ,  1999 <br> W. Ostend and James Sts.","Chris Peters ,  2011 <br> 2300 Washington Boulevard","Mary Carfagno Ferguson ,  1997 <br> Ramsey and Monroe Sts.","Patrick Jacobson ,  1999 <br> 765 W. Cross St.","Gary Mullen with Community Youth ,  2001 <br> N. Stricker and W. Franklin Sts.","Jennifer Rattigan and MICA CAP Program ,  2003 <br> 1800 block Hanover St","Danamarie Hosler ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Gary Mullen ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Gary Mullen ,  2008 <br> 601 E. 33rd Street","Danamarie Hosler ,  2008 <br> 529 E. 21st Street","Josh Van Horne ,  2010 <br> 330 W. Lafayette Street","Augustina Droze ,  2010 <br> 1818 W. Fayette Street","Tom Chalkley ,  2010 <br> 3313 Greenmount Avenue","Paul Bertholet ,  2011 <br> 3120 Erdman Avenue","Ernie, Charles and Donald Shaw, Lawrence and Tyson ,  2008 <br> 33rd and Greenmount Avenue","Danamarie Hosler ,  2007 <br> 210 Guilford Street","Charles and Donald Carroll and Tyson ,  2006 <br> 1327 Washington Boulevard, Barrister School (interior)","Robbie Woodside ,  1987 <br> 711 Poplar Grove","Tom Miller and MICA ,  2000 <br> 1740 Druid Hill Ave.","Shawn, Xenofon, et al McRaney, Kohilas, Konsalas, Perrelli, Cavocos ,  2004 <br> 503 Oldham St.","Lyle Kissack ,  2005 <br> 323 E. 20th St.","Tom Miller ,  1996 <br> North and Harford Rds.","Shawn James ,  1999 <br> 1170 Carroll St.","Ernest Shaw ,  1999 <br> 2174 Hollins St.","Tony, Shawn Shore, James, Access Art ,  2004 <br> 837 Washington Blvd.","Danamarie Hosler ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Shawn James ,  2006 <br> 610 S. Broadway","Alisha Marchewka ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Jennifer Rattigan ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Seth Goodman ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Spoon Popkin ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2008 <br> 114 Hamburg Street","Spoon Popkin ,  2008 <br> 1400 North Avenue (Court Building parking lot)","Augustina Droze ,  2009 <br> 759 Washington Boulevard","A Adams ,  2010 <br> 210 E. 22nd Street","Tom Miller ,  1987 <br> 600 Cherry Hill Rd.","Camillia Blackwell ,  1987 <br> 2222 Druid Park Dr.","Ernest Shaw ,  2000 <br> 106 S. Calverton St.","Ernest Shaw ,  2000 <br> 1207 E. North Ave.","Jay Wolf Schlossberg Cohen and Community Youth ,  2000 <br> Ashton and Smallwood Sts.","NA MICA and HEBCAC ,  2002 <br> N. Duncan and McElderry Streets","Tony Shore ,  2000 <br> 900 Ostend St.","John Ellsberry ,  1987 <br> 600 W. 28th St.","Stephanie Garmey ,  1988 <br> Ashland Ave. and N. Washington St.","George Ferrandi ,  1990 <br> 2310 Harford Rd.","Quentin Mosley ,  1990 <br> 4000 Reistertown Rd.","Bonnie Bonnell ,  1992 <br> North and Park Aves.","John Ellsberry ,  1992 <br> 500 N. Howard St.","Jenny Merker ,  1993 <br> 115 S. Carey St.","Aleks Martray ,  2006 <br> 1425 Mulberry Street","Pontella Mason ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2007 <br> 3301 Belair Road","Emily CD ,  2008 <br> 3900 Bel Air Road, Movie Shed","Gary Mullen ,  2008 <br> 540 Lakewood Street","Nelson Rivas ,  2008 <br> 529 S. Broadway","Archie Veale ,  2009 <br> 1400 Greenmount Avenue","Danamarie Hosler ,  2009 <br> 4337 Park Heights","Lyle Kissack ,  2009 <br> 528 Benninghaus Street","Lyle and Brian Kissack and Probst ,  2009 <br> 2798 The Alemeda","Sunny Miller ,  2011 <br> 416 Monroe Street","Nelson Rivas ,  2008 <br> 601 E. 33rd Street","John Ford ,  1987 <br> 3500 Hillen Rd.","Ray Ridenour ,  1999 <br> 38 E. Cross St.","Helen Glazer ,  1993 <br> 1224 W. Lombard St.","John Ellsberry ,  1994 <br> 910 W. Pratt St.","Mary Carfagno Ferguson ,  2000 <br> 1644 E. Pratt St.","Bill Remington ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","John Marra ,  2009 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrance ,  1994 <br> 1617 N. Calvert St.","Lyle and Gerald Kissack and Ross ,  1995 <br> 4000 Park Heights Ave.","Mary Carfagno Ferguson and women of My Sister's Place ,  1997 <br> Cathedral and Centre Sts.","Jeffrey Cook ,  1998 <br> 1301 Woodbourne Ave.","Kylis Winborne ,  1999 <br> 801 McCulloh St.","Eric Monastario ,  2000 <br> 412 S. Broadway","Lyle Kissack ,  2001 <br> 1904 McCulloh St.","Lyle Kissack and MICA Community Arts Partnerships ,  2004 <br> 325 N. Fulton Ave.","Benari Stewart and Urban Experience ,  2004 <br> 200 N. Bentalou St.","Kien Nyugen ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Michael Owens ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Jennifer Ratigan ,  2006 <br> 929 W. 36th Street","Chris Gregorek ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Michael Kirby ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Stephanie Leung ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Donald Tyson ,  2008 <br> 2043 Pennsylvania Avenue","Michelle Santos ,  2008 <br> 1530 N. Bentalou Street, Easterwood Recreation Center","Michael Owens ,  2009 <br> 4100 Eastern Avenue","Chris Peters and Access Art ,  2010 <br> 2410 Tolley Street, Morrell Park","Donald Tyson ,  2011 <br> 1503 Durham Street","Nelson Rivas ,  2009 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Tamara and Natalie Payne and Kossack ,  2011 <br> 2900 Barclay Street (Mosaic)","Derek, Archie, Nichole? Arnold, Veale, Gray, Mason, Waters-Eller ,  1995 <br> Howard and Franklin Sts.","Charles Lawrence ,  1998 <br> 1139 N. Gilmore St.","Shawn James and Mural Masters ,  2004 <br> W. Hamburg and Bayard Sts.","Shawn James and Access Art Inc. ,  2004 <br> Liberty and Clay Sts.","Lyle Kissack and MICA CAP Program ,  2005 <br> 1317 W. Baltimore St.","Mary Carfagno Women's Mural Project and Ferguson ,  1996 <br> 115 W. Mulberry Street"],null,null,null,null]}],"limits":{"lat":[39.2247792,39.3594491],"lng":[-76.6941267,-76.5557734]}},"evals":[],"jsHooks":[]}</script>
+## 3  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
+## 4                    1103 Brentwood Ave. Baltimore Maryland
+## 5  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
+## 6  N. Patterson Park Ave. and N. Gay St. Baltimore Maryland
+## 7                       711 N. Carey St. Baltimore Maryland
+## 8                    141 S. Central Ave. Baltimore Maryland
+## 9                         1611 Carey St. Baltimore Maryland
+## 10                 2229 1/2 W. Pratt St. Baltimore Maryland
+## # ... with 878 more rows, and 11 more variables: artistFirstName.x &lt;chr&gt;,
+## #   artistLastName.x &lt;chr&gt;, YEAR.x &lt;int&gt;, address.x &lt;chr&gt;,
+## #   artistFirstName.y &lt;chr&gt;, artistLastName.y &lt;chr&gt;, YEAR.y &lt;int&gt;,
+## #   artist_name &lt;chr&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;, address.y &lt;chr&gt;</code></pre>
+<pre><code>## Warning in validateCoords(lng, lat, funcName): Data contains 5 rows with
+## either missing or invalid lat/lon values and will be ignored</code></pre>
+<div id="htmlwidget-e00c34a83cd5b8e241fc" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e00c34a83cd5b8e241fc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[39.3031003,39.3109761,39.302946,39.3109761,39.297045,39.289335,39.3077396,39.285186,39.295057,39.2979098,39.3199352,39.3004681,39.2838909,39.3052492,39.2872453,39.293078,39.2979257,39.293078,39.2858747,39.317473,39.273966,39.2667052,null,39.285417,39.3117006,39.3509573,39.3117006,39.2797736,39.2861963,39.302475,39.3056177,null,39.293078,39.3209125,39.2859998,39.293078,39.3278143,39.3035695,39.3061202,39.3594491,39.289654,39.2667052,39.2829983,39.312175,39.279197,39.250427,39.2817615,39.3063709,39.293078,39.293078,39.3084854,39.2970553,39.3214392,39.288901,39.307208,39.303848,39.293078,39.3147123,39.2766086,39.299112,39.2836139,39.2987856,39.3119258,39.2897149,39.293078,39.293078,39.293078,39.293078,null,39.307697,39.2842879,39.3278143,39.329362,39.2237864,39.3292198,39.2824846,39.2696391,39.2831505,39.279544,39.2940726,39.269005,39.293078,39.293078,39.3278143,39.3135567,39.3050422,39.289741,39.3289315,39.3211909,39.3284973,39.2918436,null,39.2960359,39.305689,39.2865228,39.312194,39.3119258,39.2811343,39.287095,39.2828111,39.293078,39.2841296,39.293078,39.293078,39.293078,39.293078,39.2778695,39.3120804,39.2828883,39.3145669,39.250427,39.331008,39.2877232,39.311526,39.281912,39.2975474,39.2787609,39.3194381,39.3006826,39.316151,39.3338136,39.3107424,39.2950008,39.286059,39.292915,39.293078,39.3215886,null,39.2976988,39.2848418,39.3061015,39.339368,39.3590084,39.322992,39.282524,39.3278143,39.3325566,39.2771115,39.286767,39.2860281,39.2893717,39.293078,39.293078,39.308186,39.3344744,39.2962935,39.3535614,39.2987856,39.2861495,39.3072454,39.292694,39.2909453,39.293078,39.293078,39.3308982,39.293078,39.293078,39.293078,39.3065511,39.3054496,39.2869024,39.2661039,39.3079463,39.293078,39.2897149,39.29494,39.302162,39.2772694,39.2923466,39.288278,39.293759],[-76.5929533,-76.5858767,-76.609316,-76.5858767,-76.638309,-76.5991729,-76.6414165,-76.6170697,-76.650078,-76.5842579,-76.6109809,-76.5963439,-76.628641,-76.5873391,-76.6357631,-76.6108229,-76.5828445,-76.6108229,-76.5689758,-76.616725,-76.633554,-76.6314402,null,-76.6213401,-76.5996465,-76.6941267,-76.5996465,-76.623774,-76.6324665,-76.5855604,-76.592743,null,-76.6108229,-76.6094637,-76.5646963,-76.6108229,-76.6079985,-76.6284875,-76.6375274,-76.6103228,-76.588836,-76.6314402,-76.6309571,-76.588144,-76.635882,-76.6222864,-76.682277,-76.6411675,-76.6108229,-76.6108229,-76.6224363,-76.5741846,-76.6109848,-76.6391809,-76.635377,-76.6018845,-76.6108229,-76.6096862,-76.6328351,-76.641247,-76.6334947,-76.6226857,-76.5993775,-76.6072779,-76.6108229,-76.6108229,-76.6108229,-76.6108229,null,-76.5783686,-76.649615,-76.6079985,-76.631377,-76.5856813,-76.6094263,-76.6349585,-76.6495854,-76.6466378,-76.627928,-76.6412845,-76.615478,-76.6108229,-76.6108229,-76.6079985,-76.6087327,-76.6265243,-76.646022,-76.6091475,-76.5725204,-76.6094311,-76.6115566,null,-76.6646386,-76.633448,-76.5557734,-76.611645,-76.5993775,-76.6329404,-76.652203,-76.6299937,-76.6108229,-76.5936199,-76.6108229,-76.6108229,-76.6108229,-76.6108229,-76.6161755,-76.5989742,-76.6276968,-76.61315,-76.6222864,-76.6519165,-76.6121493,-76.60231,-76.6511231,-76.5872084,-76.6301065,-76.6252679,-76.5897136,-76.5962491,-76.664449,-76.6279728,-76.6197755,-76.637732,-76.64068,-76.6108229,-76.5732533,null,-76.5796004,-76.5930289,-76.6089164,-76.665756,-76.6090847,-76.59322,-76.646848,-76.6079985,-76.5910362,-76.6130808,-76.637447,-76.6326869,-76.5941845,-76.6108229,-76.6108229,-76.613336,-76.6632311,-76.6169577,-76.5925765,-76.6226857,-76.5939648,-76.6339521,-76.645172,-76.6534744,-76.6108229,-76.6108229,-76.6324382,-76.6108229,-76.6108229,-76.6108229,-76.6381413,-76.653866,-76.5621213,-76.648539,-76.5919793,-76.6108229,-76.6072779,-76.6197729,-76.64286,-76.6336963,-76.616804,-76.6387366,-76.6176],5,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#0004fc","weight":1,"opacity":0.5,"fill":true,"fillColor":"#0004fc","fillOpacity":0.2,"dashArray":null},null,null,["Jennifer Rattigan ,  2004 <br> 1731 E. Chase St.","Lyle Kissack ,  2004 <br> N. Patterson Park Ave. and N. Gay St.","Gary Mullen ,  2000 <br> 1103 Brentwood Ave.","Alexander Martray ,  2004 <br> N. Patterson Park Ave. and N. Gay St.","Deborah English ,  1989 <br> 711 N. Carey St.","Donna McCullough ,  1989 <br> 141 S. Central Ave.","Pontella Mason ,  1990 <br> 1611 Carey St.","James Voshell ,  1990 <br> 2229 1/2 W. Pratt St.","Archie Veale ,  1994 <br> 400 N. Pulaski St.","Patrick Jacobson ,  1995 <br> 2324 McElderry St.","Erik Warren ,  1996 <br> 401E. Lorraine St.","Archie Veale ,  1998 <br> 900 N. Bond St.","Mary Carfagno Ferguson ,  1999 <br> 343 Scott St.","Charles Lawrence ,  2000 <br> 2124 Mura St.","Espi and Jennifer Frazier and Rattigan ,  2003 <br> 1115 Hollins St.","Bill Remington ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Pontella Mason ,  2007 <br> 2424 McElderry Street","Donald Tyson ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Joel Bergner ,  2008 <br> 519 S. Highland Street","Greg Gannon ,  2011 <br> 2439 Charles Street","Shawn James and Mural Masters ,  2004 <br> 1620 Bush St.","Lyle Kissack ,  2011 <br> 2009 Annapolis Road","Michael Kirby ,  2005 <br> Key Highway under I95","Chevelle M. Moore Jones ,  1988 <br> 1200 Hollins Street, Hollins Market Parking Lot","Tom Miller ,  1991 <br> 1339 E. North Ave.","James Voshell ,  1991 <br> 5801 Reisterstown Rd.","Tom Miller ,  1992 <br> 1339 E. North Ave.","Unknown Wyland ,  1993 <br> Russell and Hamburg Sts.","John Ellsberry ,  1994 <br> 905 Lemmon Street","Lyle and Gerald Kissack and Ross ,  1997 <br> 1000 N. Patterson Park Ave.","Mary Carfagno Ferguson ,  1998 <br> 1756 E. Preston St.","Tony Shore and Area skateboarders ,  2000 <br> James St. near Ramsey St.","Laura Lynn Emberson ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Cindy and Lyle Garcia and Kissack ,  2006 <br> 27th and Greenmount","Michael Kirby ,  2006 <br> 3801 Eastern Avenue","Michelle Santos ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Michael Owens ,  2008 <br> 601 E. 33rd Street","Joel Bergner ,  2011 <br> 436 W. Lafayette Street","Lyle Kissack ,  2007 <br> 592 Presstman Street","Antonio Rodriquez ,  1991 <br> 5700 York Rd.","Mary Carfagno Ferguson ,  1994 <br> 2000 E. Pratt St.","Patricia Stoakley ,  1995 <br> 2009 Annapolis Rd.","Mary Carfagno Ferguson ,  1996 <br> 886 Washington Blvd.","Pontella Mason ,  1997 <br> 2117  E. North Ave.","Mary Carfagno Ferguson ,  1998 <br> 1219 Bayard St.","Tom Miller ,  1998 <br> 600 Cherry Hill Rd.","Lyle Kissack ,  2000 <br> 4004 Frederick Ave.","Benari Stewart and Urban Xperience ,  2005 <br> 1601 N. Calhoun St.","Guy Jones ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Shawn James ,  2007 <br> 1398 Mt Royal Avenue, Midtown Academy (interior)","Mark Selby ,  2009 <br> 3030 Jefferson Street, Elwood Park","Lyle Kissack ,  2010 <br> 401 Whitridge Street","John Marra ,  2010 <br> 700 N. Calhoun Street, Harlem Park Recreation Center","Michelle Santos ,  2011 <br> 1940 Druid Hill Avenue","Jessie Unterhalter ,  2011 <br> 1137 Harford Road","Brooks Todd ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Lyle Kissack ,  1999 <br> 450 E. 22nd St.","Shawn James and Mural Masters ,  2004 <br> Wicomico and Bayard Sts.","Pontella Mason ,  1994 <br> 903 N. Stricker St.","John Ellsberry ,  1998 <br> Ramsay and Cross Sts.","Gary Mullen ,  1999 <br> 801 McCulloh St.","Spoon and Dan Popkin and Van Allen ,  2003 <br> North Ave and Harford Road","Julie and Leslie Stovall and Furlong ,  2003 <br> 1928 Pennsylvania Avenue (mosaic)","Gary Mullen ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Nicolas Tolls ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Ernie Shaw ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Joel Bergner ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2008 <br> Herring Run Park, off Harford Road at Argonne","Tom Clayton ,  2009 <br> 2710 E. Hoffman Street, Fort Worthington Rec Center","Michelle Santos ,  2010 <br> 221 Pulaski Street","Danamarie Hosler ,  2008 <br> 601 E. 33rd Street","Charles Lawrence ,  2011 <br> 3424 Elm Avenue","Peggy Ward ,  2005 <br> 4501 Curtis Avenue","Robert Heironimus ,  1996 <br> Greenmount Ave. and Venerable Ave.","Mary and Terry Carfagno Ferguson and Van Tassell ,  1999 <br> W. Ostend and James Sts.","Chris Peters ,  2011 <br> 2300 Washington Boulevard","Mary Carfagno Ferguson ,  1997 <br> Ramsey and Monroe Sts.","Patrick Jacobson ,  1999 <br> 765 W. Cross St.","Gary Mullen with Community Youth ,  2001 <br> N. Stricker and W. Franklin Sts.","Jennifer Rattigan and MICA CAP Program ,  2003 <br> 1800 block Hanover St","Danamarie Hosler ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Gary Mullen ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Gary Mullen ,  2008 <br> 601 E. 33rd Street","Danamarie Hosler ,  2008 <br> 529 E. 21st Street","Josh Van Horne ,  2010 <br> 330 W. Lafayette Street","Augustina Droze ,  2010 <br> 1818 W. Fayette Street","Tom Chalkley ,  2010 <br> 3313 Greenmount Avenue","Paul Bertholet ,  2011 <br> 3120 Erdman Avenue","Ernie, Charles and Donald Shaw, Lawrence and Tyson ,  2008 <br> 33rd and Greenmount Avenue","Danamarie Hosler ,  2007 <br> 210 Guilford Street","Charles and Donald Carroll and Tyson ,  2006 <br> 1327 Washington Boulevard, Barrister School (interior)","Robbie Woodside ,  1987 <br> 711 Poplar Grove","Tom Miller and MICA ,  2000 <br> 1740 Druid Hill Ave.","Shawn, Xenofon, et al McRaney, Kohilas, Konsalas, Perrelli, Cavocos ,  2004 <br> 503 Oldham St.","Lyle Kissack ,  2005 <br> 323 E. 20th St.","Tom Miller ,  1996 <br> North and Harford Rds.","Shawn James ,  1999 <br> 1170 Carroll St.","Ernest Shaw ,  1999 <br> 2174 Hollins St.","Tony, Shawn Shore, James, Access Art ,  2004 <br> 837 Washington Blvd.","Danamarie Hosler ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Shawn James ,  2006 <br> 610 S. Broadway","Alisha Marchewka ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Jennifer Rattigan ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Seth Goodman ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Spoon Popkin ,  2008 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2008 <br> 114 Hamburg Street","Spoon Popkin ,  2008 <br> 1400 North Avenue (Court Building parking lot)","Augustina Droze ,  2009 <br> 759 Washington Boulevard","A Adams ,  2010 <br> 210 E. 22nd Street","Tom Miller ,  1987 <br> 600 Cherry Hill Rd.","Camillia Blackwell ,  1987 <br> 2222 Druid Park Dr.","Ernest Shaw ,  2000 <br> 106 S. Calverton St.","Ernest Shaw ,  2000 <br> 1207 E. North Ave.","Jay Wolf Schlossberg Cohen and Community Youth ,  2000 <br> Ashton and Smallwood Sts.","NA MICA and HEBCAC ,  2002 <br> N. Duncan and McElderry Streets","Tony Shore ,  2000 <br> 900 Ostend St.","John Ellsberry ,  1987 <br> 600 W. 28th St.","Stephanie Garmey ,  1988 <br> Ashland Ave. and N. Washington St.","George Ferrandi ,  1990 <br> 2310 Harford Rd.","Quentin Mosley ,  1990 <br> 4000 Reistertown Rd.","Bonnie Bonnell ,  1992 <br> North and Park Aves.","John Ellsberry ,  1992 <br> 500 N. Howard St.","Jenny Merker ,  1993 <br> 115 S. Carey St.","Aleks Martray ,  2006 <br> 1425 Mulberry Street","Pontella Mason ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrence ,  2007 <br> 3301 Belair Road","Emily CD ,  2008 <br> 3900 Bel Air Road, Movie Shed","Gary Mullen ,  2008 <br> 540 Lakewood Street","Nelson Rivas ,  2008 <br> 529 S. Broadway","Archie Veale ,  2009 <br> 1400 Greenmount Avenue","Danamarie Hosler ,  2009 <br> 4337 Park Heights","Lyle Kissack ,  2009 <br> 528 Benninghaus Street","Lyle and Brian Kissack and Probst ,  2009 <br> 2798 The Alemeda","Sunny Miller ,  2011 <br> 416 Monroe Street","Nelson Rivas ,  2008 <br> 601 E. 33rd Street","John Ford ,  1987 <br> 3500 Hillen Rd.","Ray Ridenour ,  1999 <br> 38 E. Cross St.","Helen Glazer ,  1993 <br> 1224 W. Lombard St.","John Ellsberry ,  1994 <br> 910 W. Pratt St.","Mary Carfagno Ferguson ,  2000 <br> 1644 E. Pratt St.","Bill Remington ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","John Marra ,  2009 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Charles Lawrance ,  1994 <br> 1617 N. Calvert St.","Lyle and Gerald Kissack and Ross ,  1995 <br> 4000 Park Heights Ave.","Mary Carfagno Ferguson and women of My Sister's Place ,  1997 <br> Cathedral and Centre Sts.","Jeffrey Cook ,  1998 <br> 1301 Woodbourne Ave.","Kylis Winborne ,  1999 <br> 801 McCulloh St.","Eric Monastario ,  2000 <br> 412 S. Broadway","Lyle Kissack ,  2001 <br> 1904 McCulloh St.","Lyle Kissack and MICA Community Arts Partnerships ,  2004 <br> 325 N. Fulton Ave.","Benari Stewart and Urban Experience ,  2004 <br> 200 N. Bentalou St.","Kien Nyugen ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Michael Owens ,  2006 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Jennifer Ratigan ,  2006 <br> 929 W. 36th Street","Chris Gregorek ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Michael Kirby ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Stephanie Leung ,  2007 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Donald Tyson ,  2008 <br> 2043 Pennsylvania Avenue","Michelle Santos ,  2008 <br> 1530 N. Bentalou Street, Easterwood Recreation Center","Michael Owens ,  2009 <br> 4100 Eastern Avenue","Chris Peters and Access Art ,  2010 <br> 2410 Tolley Street, Morrell Park","Donald Tyson ,  2011 <br> 1503 Durham Street","Nelson Rivas ,  2009 <br> Baltimore Farmer's Market - Holliday and Saratoga Streets","Tamara and Natalie Payne and Kossack ,  2011 <br> 2900 Barclay Street (Mosaic)","Derek, Archie, Nichole? Arnold, Veale, Gray, Mason, Waters-Eller ,  1995 <br> Howard and Franklin Sts.","Charles Lawrence ,  1998 <br> 1139 N. Gilmore St.","Shawn James and Mural Masters ,  2004 <br> W. Hamburg and Bayard Sts.","Shawn James and Access Art Inc. ,  2004 <br> Liberty and Clay Sts.","Lyle Kissack and MICA CAP Program ,  2005 <br> 1317 W. Baltimore St.","Mary Carfagno Women's Mural Project and Ferguson ,  1996 <br> 115 W. Mulberry Street"],null,null,null,null]}],"limits":{"lat":[39.2237864,39.3594491],"lng":[-76.6941267,-76.5557734]}},"evals":[],"jsHooks":[]}</script>
+<pre><code>It is amazing to see where the city first choose to have the murals. With the first mural completed in 1987 until 1990, you can see the tarrgeted areas that the city choose in order to fight gangs, girfitti, and to bring a sense of ownership to the community. These are, as seen below, were the areas that Baltimore felt would improve a greater sense of identity and pride of their community.  
+</code></pre>
+<pre><code>## # A tibble: 13 × 5
+##     YEAR                                        location       lon
+##    &lt;int&gt;                                           &lt;chr&gt;     &lt;dbl&gt;
+## 1   1989                                711 N. Carey St. -76.63831
+## 2   1989                             141 S. Central Ave. -76.59917
+## 3   1990                                  1611 Carey St. -76.64142
+## 4   1990                           2229 1/2 W. Pratt St. -76.61707
+## 5   1988 1200 Hollins Street, Hollins Market Parking Lot -76.62134
+## 6   1987                                711 Poplar Grove -76.66464
+## 7   1987                             600 Cherry Hill Rd. -76.62229
+## 8   1987                             2222 Druid Park Dr. -76.65192
+## 9   1987                                 600 W. 28th St. -76.62527
+## 10  1988              Ashland Ave. and N. Washington St. -76.58971
+## 11  1990                                2310 Harford Rd. -76.59625
+## 12  1990                            4000 Reistertown Rd. -76.66445
+## 13  1987                                 3500 Hillen Rd. -76.59104
+## # ... with 2 more variables: lat &lt;dbl&gt;, artist_name &lt;chr&gt;</code></pre>
+<div id="htmlwidget-6621f5cb00fc292a868d" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6621f5cb00fc292a868d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[39.297045,39.289335,39.3077396,39.285186,39.285417,39.2960359,39.250427,39.331008,39.3194381,39.3006826,39.316151,39.3338136,39.3325566],[-76.638309,-76.5991729,-76.6414165,-76.6170697,-76.6213401,-76.6646386,-76.6222864,-76.6519165,-76.6252679,-76.5897136,-76.5962491,-76.664449,-76.5910362],5,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#f90031","weight":1,"opacity":0.5,"fill":true,"fillColor":"#f90031","fillOpacity":0.2,"dashArray":null},null,null,["Deborah English , 1989 <br> 711 N. Carey St.","Donna McCullough , 1989 <br> 141 S. Central Ave.","Pontella Mason , 1990 <br> 1611 Carey St.","James Voshell , 1990 <br> 2229 1/2 W. Pratt St.","Chevelle M. Moore Jones , 1988 <br> 1200 Hollins Street, Hollins Market Parking Lot","Robbie Woodside , 1987 <br> 711 Poplar Grove","Tom Miller , 1987 <br> 600 Cherry Hill Rd.","Camillia Blackwell , 1987 <br> 2222 Druid Park Dr.","John Ellsberry , 1987 <br> 600 W. 28th St.","Stephanie Garmey , 1988 <br> Ashland Ave. and N. Washington St.","George Ferrandi , 1990 <br> 2310 Harford Rd.","Quentin Mosley , 1990 <br> 4000 Reistertown Rd.","John Ford , 1987 <br> 3500 Hillen Rd."],null,null,null,null]}],"limits":{"lat":[39.250427,39.3338136],"lng":[-76.6646386,-76.5897136]}},"evals":[],"jsHooks":[]}</script>
 
 
 
