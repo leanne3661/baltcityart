@@ -16,11 +16,6 @@ library(tidyverse)
 library(cleanNLP)
 library(ggmap)
 ```
-
-```
-In 1975, Baltimore City initiated a record of murals with the Baltimore City limits. During this time, Baltimore created the Baltimore Mural Program in hopes to take back the community. This visualization notes the locations of each mural that has been produced and recorded. The visualization indicates the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
-
-```
 ```{r Data Input, include=FALSE}
 Baltimore_City_Murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimore_Murals/Baltimore_Murals/Baltimore_City_Murals.csv",
      col_types =  cols( 
@@ -33,8 +28,12 @@ Baltimore_City_Murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimo
     address = col_character()
 ))
 ```
+```
+In 1975, Baltimore City initiated a record of murals with the Baltimore City limits. During this time, Baltimore created the Baltimore Mural Program in hopes to take back the community. This visualization notes the locations of each mural that has been produced and recorded. The visualization indicates the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
 
-```{r Baltimore Sites, echo=FALSE, message=FALSE, warning=FALSE}
+```
+
+```{r Baltimore Sites, echo=FALSE}
 artists <- Baltimore_City_Murals %>% 
     select(-address) %>% 
     mutate(artist_name = paste(artistFirstName, artistLastName, sep = " ")) 
@@ -47,17 +46,22 @@ left_join(site, artists, copy= F)
 coords <- geocode(site$site, output = "latlona")
 address_coords <- bind_cols(artists, coords) 
 
-address_coords %>% 
-select(address_coords, YEAR, artist_name, lon, lat)    
-
+Baltimore_City_Murals %>% 
+  left_join(address_coords, by = c("location", "city", "state")) %>%   
+ filter(!is.na(lat) & !is.na(lon)) %>%   
 
 leaflet() %>% 
   addTiles() %>% 
-  addCircleMarkers(data = address_coords,
+  addCircleMarkers(data = Baltimore_City_Murals,
                    lng = ~lon, lat = ~lat, 
                    color = "purple", weight = 1,
                    radius = 5,
                    popup = ~paste(artist_name, ", ", YEAR, '<br>', location))
 ```
+```
+
+
+```
+
 
 
