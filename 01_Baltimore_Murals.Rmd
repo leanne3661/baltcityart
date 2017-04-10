@@ -54,31 +54,5 @@ leaflet() %>%
 ```
 In 1975, Baltimore City initiated a record of murals with the Baltimore City limits. During this time, Baltimore created the Baltimore Mural Program in hopes to take back the community. This visualization notes the locations of each mural that has been produced and recorded. The visualization indicates the artist's name, the year it was produced, and the site location. When you zoom into an area, the targeted indicators remain true to the GPS coordinations, and though it reduced in size, it is only to meet the need to be more concise.
 
-```{r Baltimore, echo=FALSE}
-
-artists <- Baltimore_City_Murals %>% 
-    select(-address) %>% 
-    mutate(artist_name = paste(artistFirstName, artistLastName, sep = " ")) %>%
-    mutate(site = paste(location, city, state, sep = ", "))
-
-coords <- geocode(Baltimore_City_Murals$site, output = "latlona")
-address_coords <- bind_cols(to_geocode, coords)
-
-address_coords %>% 
-  select(artist, location, lon, lat)
-
-
-select(Baltimore_City_Murals, address, lon, lat) 
-
-
-leaflet() %>% 
-  addTiles() %>% 
-  addCircleMarkers(data = address_coords,
-                   lng = ~lon, lat = ~lat,
-                   label = ~paste(artist),
-                   radius = 10,
-                   color = "purple", weight = 1,
-                   popup = ~paste(artist, '<br>', address))
-
 ```
 
