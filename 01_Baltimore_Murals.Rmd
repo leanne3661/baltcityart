@@ -7,14 +7,14 @@ output:
   pdf_document: default
 ---
 
-```{r Libraries, include=FALSE}
+```{r, echo=FALSE, include=FALSE}
 library(sf)                  
 library(leaflet)            
 library(scales)             
 library(cleanNLP)
 library(ggmap)
 ```
-```{r Data Input, include=FALSE}
+```{r Data Input, echo=FALSE}
 Baltimore_City_Murals <- read_csv("~/Desktop/School/Clio2/Baltimore City/Baltimore_Murals/Baltimore_Murals/Baltimore_City_Murals.csv",
      col_types =  cols( 
     location = col_character(),
@@ -31,7 +31,7 @@ In 1975, Baltimore City, Maryland, created the Baltimore Mural Program in hope t
 
 ```
 
-```{r Baltimore Sites, echo=FALSE}
+```{r Baltimore Sites, include=FALSE}
 artists <- Baltimore_City_Murals %>% 
     select(-address) %>% 
     mutate(artist_name = paste(artistFirstName, artistLastName, sep = " ")) 
@@ -45,10 +45,12 @@ coords <- geocode(site$site, output = "latlona")
 address_coords <- bind_cols(artists, coords) 
 
 Baltimore_City_Murals %>% 
-  left_join(address_coords, by = c("location", "city", "state")) %>%   
- filter(!is.na(lat) & !is.na(lon))
+  left_join(address_coords, by = c("location", "city", "state")) %>% 
+ filter(!is.na(lat) & !is.na(lon)) %>% View
+```
+```{r, echo=FALSE}
 
-leaflet() %>% 
+leaflet(Baltimore_City_Murals) %>% 
   addTiles() %>% 
   addCircleMarkers(data = address_coords,
                    lng = ~lon, lat = ~lat, 
@@ -60,19 +62,20 @@ leaflet() %>%
 It is amazing to see where the city first choose to have the murals. With the first mural completed in 1987 until 1990, you can see the tarrgeted areas that the city choose in order to fight gangs, girfitti, and to bring a sense of ownership to the community. These are, as seen below, were the areas that Baltimore felt would improve a greater sense of identity and pride of their community.  
 
 ```
-```{r 13, echo=FALSE}
+```{r 13, include=FALSE}
 
 Early <- address_coords %>% 
   filter(YEAR <= 1990)
 
 Early %>% 
 select(YEAR, location, lon, lat, artist_name)
-
+```
+```{r, echo=FALSE}
 leaflet(Early) %>% 
   addTiles() %>% 
   addCircleMarkers(data = Early,
                    lng = ~lon, lat = ~lat, 
-                   color = "#f90031", weight = 1,
+                   color = "#f90031", weight = 3,
                    radius = 5,
                    popup = ~paste(artist_name,",",YEAR, '<br>', location))
 
