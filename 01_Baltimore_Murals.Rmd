@@ -5,17 +5,12 @@ date: "April 10, 2017"
 output:
   pdf_document: default
   html_document: default
-  GET /rate_limit
 ---
-```{r}
-get/rate_limit
-```
 
 ```{r Libraries, include=FALSE}
 library(sf)                  
 library(leaflet)            
 library(scales)             
-library(tidyverse)
 library(cleanNLP)
 library(ggmap)
 ```
@@ -51,28 +46,29 @@ address_coords <- bind_cols(artists, coords)
 
 Baltimore_City_Murals %>% 
   left_join(address_coords, by = c("location", "city", "state")) %>%   
- filter(!is.na(lat) & !is.na(lon)) %>%   
+ filter(!is.na(lat) & !is.na(lon))
 
 leaflet() %>% 
   addTiles() %>% 
-  addCircleMarkers(data = Baltimore_City_Murals,
+  addCircleMarkers(data = address_coords,
                    lng = ~lon, lat = ~lat, 
                    color = "#0004fc", weight = 1,
                    radius = 5,
-                   popup = ~paste(artist_name, ", ", YEAR, '<br>', location, 
-                  zoomAnimation = TRUE))
+                   popup = ~paste(artist_name, ", ", YEAR, '<br>', location))
 ```
 ```
 It is amazing to see where the city first choose to have the murals. With the first mural completed in 1987 until 1990, you can see the tarrgeted areas that the city choose in order to fight gangs, girfitti, and to bring a sense of ownership to the community. These are, as seen below, were the areas that Baltimore felt would improve a greater sense of identity and pride of their community.  
 
 ```
-```{r}
-Early <- Baltimore_City_Murals %>% 
-  group_by(YEAR) 
-arrange(Early, YEAR)
-filter(Early, YEAR <= 1990) %>% View
+```{r 13, echo=FALSE}
 
-leaflet() %>% 
+Early <- address_coords %>% 
+  filter(YEAR <= 1990)
+
+Early %>% 
+select(YEAR, location, lon, lat, artist_name)
+
+leaflet(Early) %>% 
   addTiles() %>% 
   addCircleMarkers(data = Early,
                    lng = ~lon, lat = ~lat, 
@@ -80,8 +76,6 @@ leaflet() %>%
                    radius = 5,
                    popup = ~paste(artist_name,",",YEAR, '<br>', location))
 
-
-?leaflet
 ```
 
 
