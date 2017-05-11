@@ -31,7 +31,7 @@ In 1975, Baltimore City, Maryland, created the Baltimore Mural Program in hope t
 
 ```
 
-```{r Baltimore Sites, include=FALSE}
+```{r Baltimore Sites, message=FALSE, warning=FALSE, include=FALSE}
 artists <- Baltimore_City_Murals %>% 
     select(-address) %>% 
     mutate(artist_name = paste(artistFirstName, artistLastName, sep = " ")) 
@@ -46,9 +46,9 @@ address_coords <- bind_cols(artists, coords)
 
 Baltimore_City_Murals %>% 
   left_join(address_coords, by = c("location", "city", "state")) %>% 
- filter(!is.na(lat) & !is.na(lon)) %>% View
+ filter(!is.na(lat) & !is.na(lon))
 ```
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 leaflet(Baltimore_City_Murals) %>% 
   addTiles() %>% 
